@@ -1,8 +1,8 @@
 # [![](https://pushme-pullyou.github.io/assets/svg/octicon.svg )](https://github.com/pushme-pullyou/2023/ "Source code on GitHub" ) [PushMe PullYou 2023]( https://pushme-pullyou.github.io/2023/ "Home page" ) / [TooToo Read Me]( https://github.com/pushme-pullyou/2023/tree/main/tootoo/ "2023-01-22" )
 
 <!--@@@
-<div class=iframe-resize ><iframe src=https://pushme-pullyou.github.io/2023/tootoo/ height=100% width=100% ></iframe></div>
-_"TooToo Read Me" in a resizable window_
+<div class=iframe-resize ><iframe src=https://example.com height=100% width=100% ></iframe></div>
+_"example.com" in a resizable window. Tootoo goes into an ifinite loop_
 @@@-->
 
 ## Full Screen: [TooToo]( https://pushme-pullyou.github.io/2023/tootoo/ )
