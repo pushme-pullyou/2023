@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0" />
+	<meta name="description" content="">
+	<meta name="date" content="2022-08-04">
+	<title></title>
+	<style>
+		body {
+			font: 100% monospace;
+		}
+
+		#menustate {
+			display: none;
+		}
+
+		label {
+			/* Basic styling of hamburger button */
+			display: grid;
+			place-content: center;
+			width: 2.5rem;
+			height: 2.5rem;
+			font-size: 2rem;
+			background: #ccf;
+		}
+
+		nav ul,
+		nav .close {
+			/* Hide the menu and close button */
+			display: none;
+		}
+
+		#menustate:checked~nav :is(ul, .close) {
+			/* Show the menu and close button */
+			display: block;
+		}
+
+		#menustate:checked~nav .open {
+			/* Hide the open button */
+			display: none;
+		}
+	</style>
+</head>
+
+<body>
+
+
+	<input aria-hidden="true" type="checkbox" id="menustate" />
+	<nav>
+		<label for="menustate">
+			<span class="open">≡</span>
+			<span class="close">×</span>
+		</label>
+		<ul>
+			<li>Home</li>
+			<li>Contact</li>
+			<li>About</li>
+		</ul>
+	</nav>
+
+
+	<h1>
+		<a href="https://github.com/pushme-pullyou/tootoo-2022/tree/master/xxxxxx/" target="_blank"
+			title="source code on GitHub"><img
+				src=https://pushme-pullyou.github.io/tootoo-2022/assets/icons/mark-github.svg></a>
+		<a href="" title="Click this menu title to reset the model">
+			<span id=spnTitle></span>
+			<span id=spnVersion></span>
+		</a>
+	</h1>
+
+
+
+	<div id="divContent"></div>
+
+
+	<script>
+
+		init();
+
+		function init () {
+
+			spnTitle.innerHTML = document.title ? document.title : location.href.split( '/' ).pop().slice( 0, - 5 ).replace( /-/g, ' ' );
+
+			spnVersion.innerHTML = document.head.querySelector( "[ name=date ]" ).content;
+
+
+		}
+
+
+
+
+
+	</script>
+
+
+</body>
+
+</html>
