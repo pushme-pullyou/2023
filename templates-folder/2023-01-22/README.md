@@ -3,7 +3,7 @@
 [![](https://pushme-pullyou.github.io/assets/svg/octicon.svg )](https://github.com/pushme-pullyou/assets/ "Source code on GitHub" ) [PushMe PullYou Assets]( https://pushme-pullyou.github.io/assets/ "Home page" ) / [PushMe PullYou Templates Read Me]( https://github.com/pushme-pullyou/assets/tree/main/templates/ "2023-01-10" )
 
 <!--@@@
-<div class=iframe-resize ><iframe src=https://pushme-pullyou.github.io/assets/templates/ height=100% width=100% ></iframe></div>
+<div class=iframe-resize ><iframe src=https://pushme-pullyou.github.io/2023/templates-foldere/ height=100% width=100% ></iframe></div>
 _"Templates Read Me" in a resizable window_
 @@@-->
 

@@ -3,6 +3,8 @@
 // jshint esversion: 6
 // jshint loopfunc: true
 
+Unicode Character “≡” (U+2261) https://www.compart.com/en/unicode/U+2261
+
 <label title="do it"> Slider / Range <output id=out >50</output>
 	<input [ type=range ] id=rng oninput=outInp.value=value;>
 </label>
@@ -16,13 +18,10 @@
 </span>
 
 
-function requestFile ( url = "https://example.com", callback = onLoad ) {
-
-	url = "https://cdn.jsdelivr.net/gh/pushme-pullyou/tootoo-2021@master/README.md";
-	const urlCORS = ""; //https://cors-anywhere.herokuapp.com/";
+function requestFile ( url = "https://theo-armour.github.io/", callback = onLoad ) {
 
 	xhr = new XMLHttpRequest();
-	xhr.open( "GET", urlCORS + url, true );
+	xhr.open( "GET", url, true );
 	xhr.responseType = "text";
 	xhr.onerror = ( xhr ) => console.log( "error:", xhr );
 	//xhr.onprogress = ( xhr ) => console.log( "bytes loaded:", xhr.loaded );
@@ -30,6 +29,7 @@ function requestFile ( url = "https://example.com", callback = onLoad ) {
 	xhr.send( null );
 
 }
+
 
 function onLoad ( response ) {
 
