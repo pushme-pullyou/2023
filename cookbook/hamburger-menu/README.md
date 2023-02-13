@@ -24,6 +24,8 @@ _"Hamburger Menu" in a resizable window_
   * https://codepen.io/enyo/pen/eYjVqzm
   * https://codepen.io/enyo/pen/yLqjrOR
 
+* ≡ U+2261
+
 ## Change Log
 
 
