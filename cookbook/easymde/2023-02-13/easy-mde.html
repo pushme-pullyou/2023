@@ -22,8 +22,13 @@
 			margin: 0.5em 0;
 		}
 
-		h2 {
+		.cm-header-1 {
+			font-size: 120% !important;
+			margin: 0;
+		}
+		.cm-header-2 {
 			display: inline;
+			font-size: 110% !important;
 			margin: 0;
 		}
 
@@ -110,7 +115,7 @@
 
 			window.addEventListener( "beforeunload", XGP.checkForChange );
 
-			//XGP.autoSave();
+			XGP.autoSave();
 
 			XGP.onHashChange();
 
@@ -178,19 +183,19 @@
 			// const content =  atob( xhr.target.response.content );
 			const content = decodeURIComponent( escape( window.atob( xhr.target.response.content ) ) );
 
-			if ( XGP.extension === "md" || XGP.extension === "js" ) {
+			//if ( XGP.extension === "md" || XGP.extension === "js" ) {
 
 				// divContent.contentEditable = true;
 				// divContent.innerText = content.replace( /[\r\n]{4,}/g, "\n\n\n" );
 
 				easyMDE.value( content );
 
-			} else {
+			//} else {
 
-				divContent.contentEditable = false;
-				divContent.innerHTML = content;
+				//divContent.contentEditable = false;
+				//divContent.innerHTML = content;
 
-			}
+			//}
 
 			XGP.content = content;
 
@@ -214,7 +219,7 @@
 
 			if ( !XGP.saveInterval ) {
 
-				XGP.saveInterval = setInterval( XGP.getSha, 50000 ); // in ms
+				XGP.saveInterval = setInterval( XGP.getSha, 80000 ); // in ms
 
 			} else {
 
@@ -233,7 +238,7 @@
 
 			if ( XGP.url === "" ) { alert( "No URL" ); return; }
 
-			if ( XGP.content.length === divContent.innerText.length ) return;
+			if ( XGP.content.length === easyMDE.value().length ) return;
 
 			if ( !XGP.url.endsWith( "md" ) ) return;
 
@@ -260,7 +265,7 @@
 
 			console.log( "XGP.sha", XGP.sha );
 
-			XGP.content = divContent.innerText.replace( /[\r\n]{4,}/g, "\n\n\n" );
+			XGP.content = easyMDE.value().replace( /[\r\n]{4,}/g, "\n\n\n" );
 
 			const codedData = window.btoa( unescape( encodeURIComponent( XGP.content ) ) ); // encode the string
 
@@ -290,7 +295,7 @@
 
 		XGP.checkForChange = function ( event ) {
 
-			if ( divContent.innerText === XGP.content ) { return; }
+			if ( easyMDE.value() === XGP.content ) { return; }
 
 			if ( !XGP.url.endsWith( "md" ) ) return;
 
