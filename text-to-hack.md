@@ -8,5 +8,4 @@ thinking
 
 123
 
-hhhh
 ***
