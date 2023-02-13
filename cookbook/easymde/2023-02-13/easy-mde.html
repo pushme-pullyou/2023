@@ -26,6 +26,7 @@
 			font-size: 120% !important;
 			margin: 0;
 		}
+
 		.cm-header-2 {
 			display: inline;
 			font-size: 110% !important;
@@ -65,13 +66,20 @@
 		<div id="divContent" contentEditable></div>
 
 		<textarea id="textArea"></textarea>
-		<script>
-			const easyMDE = new EasyMDE( { element: document.getElementById( 'textArea' ) } );
-		</script>
 
 	</main>
 
 	<script>
+
+		const easyMDE = new EasyMDE( {
+			autofocus: true,
+			element: textArea,
+				blockStyles: {
+				italic: "_",
+			},
+			toolbar: false,
+
+		} );
 
 		// [X]MLHTTPRequest [G]itHub [P]ush (XGP)
 
@@ -133,7 +141,6 @@
 		test2 = () => location.hash = XGP.base + "concept.md";
 
 
-
 		XGP.setGitHubAccessToken = function () {
 
 			localStorage.setItem( "githubAccessToken", XGPinpAccessToken.value );
@@ -185,15 +192,15 @@
 
 			//if ( XGP.extension === "md" || XGP.extension === "js" ) {
 
-				// divContent.contentEditable = true;
-				// divContent.innerText = content.replace( /[\r\n]{4,}/g, "\n\n\n" );
+			// divContent.contentEditable = true;
+			// divContent.innerText = content.replace( /[\r\n]{4,}/g, "\n\n\n" );
 
-				easyMDE.value( content );
+			easyMDE.value( content );
 
 			//} else {
 
-				//divContent.contentEditable = false;
-				//divContent.innerHTML = content;
+			//divContent.contentEditable = false;
+			//divContent.innerHTML = content;
 
 			//}
 
@@ -219,7 +226,7 @@
 
 			if ( !XGP.saveInterval ) {
 
-				XGP.saveInterval = setInterval( XGP.getSha, 80000 ); // in ms
+				XGP.saveInterval = setInterval( XGP.getSha, 15000 ); // in ms
 
 			} else {
 
@@ -242,7 +249,7 @@
 
 			if ( !XGP.url.endsWith( "md" ) ) return;
 
-			//console.log( "saving" );
+			console.log( "saving" );
 
 			const xhr = new XMLHttpRequest();
 			xhr.open( "GET", XGP.url, true );
