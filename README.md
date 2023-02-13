@@ -10,6 +10,11 @@ _"example.com" in a resizable window_
 
 ## Concept
 
+## Links of Interest
+
+* try https://simplemde.com/ ~ https://simplemde.com/
+  * https://github.com/Ionaru/easy-markdown-editor
+
 
 ## Text you can include in read me files
 
@@ -30,8 +35,6 @@ _"example.com" in a resizable window_
 
 ## Issues
 
-
-## Links of Interest
 
 
 ## Change Log
