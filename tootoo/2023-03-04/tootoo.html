@@ -46,7 +46,6 @@
 		text-decoration: underline;
 	}
 
-
 	nav {
 		left: var(--margin);
 		position: fixed;
@@ -148,12 +147,38 @@
 
 	/* IDs */
 
-	#divContent {
+	 #divContent {
 		/* border:1px solid red; */
 		margin: 0 0.5rem 0 calc(3rem + var(--mnu-width));
 		max-width: 50rem;
 	}
 
+
+	#main {
+		height: 100%;
+		margin: 0;
+		padding: 0rem;
+		width: 100%;
+		display: grid;
+		overflow: hidden;
+		place-items: center;
+	}
+
+	#divContent {
+		background-color: white;
+		border: 2px solid #888;
+		border-radius: 1rem;
+		/* left: calc(var(--mnu-width) + 1.5rem); */
+		padding: 0 1rem;
+		margin: 1.8rem 0 0 calc(var(--mnu-width) - 1rem);
+		max-width: 35rem;
+
+		box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+	}
+
+	#nav1 {
+		box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+	}
 
 	@media all and (max-width: 800px) {
 
@@ -213,6 +238,7 @@
 
 					<a href="" title="Click this title to reload this page" target="_top">tootoo 2023-03-04</a>
 				</h1>
+
 				<div id=divMenuText class="menuText">
 
 					<p>
@@ -282,62 +308,11 @@
 
 	</nav>
 
-	<div id=divContent>
-
-		<h1>test</h1>
-
-		<p>lorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora
-			incidunt, ut labore et dolore magnam aliquam quaerat voluptatem. ut enim ad minima veniam, quis nostrum
-			exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? quis autem vel
-			eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui
-			dolorem eum fugiat, quo voluptas nulla pariatur?
-		</p>
-
-		<h1>test</h1>
-
-		<p>lorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora
-			incidunt, ut labore et dolore magnam aliquam quaerat voluptatem. ut enim ad minima veniam, quis nostrum
-			exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? quis autem vel
-			eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui
-			dolorem eum fugiat, quo voluptas nulla pariatur?
-		</p>
-
-
-		<h1>test</h1>
-
-		<p>lorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora
-			incidunt, ut labore et dolore magnam aliquam quaerat voluptatem. ut enim ad minima veniam, quis nostrum
-			exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? quis autem vel
-			eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui
-			dolorem eum fugiat, quo voluptas nulla pariatur?
-		</p>
-
-
-		<h1>test</h1>
-
-		<p>lorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora
-			incidunt, ut labore et dolore magnam aliquam quaerat voluptatem. ut enim ad minima veniam, quis nostrum
-			exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? quis autem vel
-			eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui
-			dolorem eum fugiat, quo voluptas nulla pariatur?
-		</p>
-
-
-		<h1>test</h1>
-
-		<p>lorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora
-			incidunt, ut labore et dolore magnam aliquam quaerat voluptatem. ut enim ad minima veniam, quis nostrum
-			exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? quis autem vel
-			eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui
-			dolorem eum fugiat, quo voluptas nulla pariatur?
-		</p>
-
-
-	</div>
+	<main id="main">
+		<div id=divContent></div>
+	</main>
 
 	<script>
-
-
 
 		defaultFile = "../../README.md";
 
@@ -348,7 +323,6 @@
 
 		function init () {
 
-
 			showdown.setFlavor( "github" );
 
 			if ( !location.hash ) { location.hash = defaultFile; }
@@ -356,6 +330,8 @@
 			location.hash.endsWith( ".md" ) ? onHashChange() : window.location.href = location.hash.slice( 1 );
 
 			window.addEventListener( "hashchange", onHashChange, false );
+
+			main.addEventListener( "mousemove", onMouseMove, false );
 
 			if ( location.protocol === "https:" ) {
 
@@ -390,6 +366,20 @@
 				window.scrollTo( 0, 0 );
 			};
 			xhr.send( null );
+
+		}
+
+
+		function onMouseMove ( e ) {
+
+			const width = window.innerWidth;
+			const height = window.innerHeight;
+
+			const red = e.x / width * 100;
+			const green = e.y / height * 100;
+			const blue = ( e.x / width ) - ( e.y / height ) * 100;
+
+			document.body.style.background = `rgb(${ red }%, ${ green }%, ${ blue }%)`;
 
 		}
 	</script>
