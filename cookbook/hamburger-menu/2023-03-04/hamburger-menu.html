@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>hamburger menu</title>
+</head>
+<style>
+	/* Copyright 2023 Theo Armour. MIT License */
+
+	@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700");
+
+	:root {
+		font: 100% monospace;
+		font-size: 100%;
+		--mnu-width: 19rem;
+		--margin: 0.5rem;
+	}
+
+	* {
+		box-sizing: border-box;
+		font-family: "Lato", sans-serif;
+		scroll-behavior: smooth;
+	}
+
+
+	nav {
+		left: var(--margin);
+		position: fixed;
+		top: var(--margin);
+	}
+
+	nav h1 {
+		margin: 0;
+		padding: 0;
+	}
+
+	.menu {
+		background-color: white;
+		border: 0.1rem solid black;
+		border-radius: var(--margin);
+		padding: 0 var(--margin);
+
+	}
+
+	.menuBurger {
+		display: none;
+		font-size: 3rem;
+	}
+
+	.menuContent {
+		width: var(--mnu-width);
+	}
+
+	.menuText {
+		height: calc(100vh - 4rem);
+		overflow: auto;
+	}
+
+	#divContent {
+		/* border:1px solid red; */
+		margin: 0 0.5rem 0 calc(3rem + var(--mnu-width));
+		max-width: 50rem;
+	}
+
+	@media all and (max-width: 800px) {
+
+		#divContent {
+			left: 0;
+			margin: 0;
+			padding: var(--margin);
+			width: 100%;
+		}
+
+		.menuBurger {
+			display: inline;
+		}
+
+		.menuContent {
+			display: none;
+			opacity: 0;
+			visibility: collapse;
+
+		}
+
+		.menuText {
+
+			height: calc(100vh - 7rem);
+
+		}
+
+		.menu:hover .menuContent {
+			display: block;
+			visibility: visible;
+			opacity: 1;
+			transition: 1s opacity;
+
+		}
+
+	}
+</style>
+
+<body>
+
+	<nav>
+
+		<div class="menu">
+
+			<div class="menuBurger">≡</div>
+
+			<div class="menuContent">
+
+				<h1><a href="" target="_top">hamburger menu</a></h1>
+
+				<div class="menuText">
+
+					<p>abc 123</p>
+					<p>abc 123</p>
+					<p>abc 123</p>
+					<p>abc 123</p>
+					<p>abc 123</p>
+					<p>abc 123</p>
+					<p>abc 123</p>
+					<p>abc 123</p>
+					<p>abc 123</p>
+					<p>abc 123</p>
+					<p>abc 123</p>
+					<p>abc 123</p>
+					<p>abc 123</p>
+					<p>abc 123</p>
+					<p>abc 123</p>
+					<p>abc 123</p>
+					<p>abc 123</p>
+					<p>abc 123</p>
+					<p>abc 123</p>
+					<p>abc 123</p>
+					<p>abc 123</p>
+					<p>abc 123</p>
+					<p>abc 123</p>
+					<p>abc 123</p>
+					<p>abc 123</p>
+					<p>abc 123</p>
+					<p>abc 123</p>
+					<p>abc 123</p>
+					<p>abc 123</p>
+					<p>abc 123</p>
+					<p>abc 123</p>
+					<p>abc 123</p>
+					zzz
+				</div>
+				
+			</div>
+
+		</div>
+
+	</nav>
+
+	<div id=divContent>
+
+		<h1>test</h1>
+
+		<p>lorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora
+			incidunt, ut labore et dolore magnam aliquam quaerat voluptatem. ut enim ad minima veniam, quis nostrum
+			exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? quis autem vel
+			eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui
+			dolorem eum fugiat, quo voluptas nulla pariatur?
+		</p>
+
+		<h1>test</h1>
+
+		<p>lorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora
+			incidunt, ut labore et dolore magnam aliquam quaerat voluptatem. ut enim ad minima veniam, quis nostrum
+			exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? quis autem vel
+			eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui
+			dolorem eum fugiat, quo voluptas nulla pariatur?
+		</p>
+
+
+		<h1>test</h1>
+
+		<p>lorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora
+			incidunt, ut labore et dolore magnam aliquam quaerat voluptatem. ut enim ad minima veniam, quis nostrum
+			exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? quis autem vel
+			eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui
+			dolorem eum fugiat, quo voluptas nulla pariatur?
+		</p>
+
+
+		<h1>test</h1>
+
+		<p>lorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora
+			incidunt, ut labore et dolore magnam aliquam quaerat voluptatem. ut enim ad minima veniam, quis nostrum
+			exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? quis autem vel
+			eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui
+			dolorem eum fugiat, quo voluptas nulla pariatur?
+		</p>
+
+
+		<h1>test</h1>
+
+		<p>lorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora
+			incidunt, ut labore et dolore magnam aliquam quaerat voluptatem. ut enim ad minima veniam, quis nostrum
+			exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? quis autem vel
+			eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui
+			dolorem eum fugiat, quo voluptas nulla pariatur?
+		</p>
+
+
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<style>
+	/* Copyright 2023 Theo Armour. MIT License */
+
+	@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700");
+
+	:root {
+		font: 100% monospace;
+		font-size: 100%;
+		--mnu-width: 19rem;
+		--main-hue: 206;
+	}
+
+	* {
+		box-sizing: border-box;
+		font-family: "Lato", sans-serif;
+		scroll-behavior: smooth;
+	}
+
+	body {}
+
+	#divContent {
+		margin: 0 auto;
+		max-width: 50rem;
+	}
+
+	nav {
+		left: 1rem;
+		position: fixed;
+
+	}
+
+	.tooltip {
+		background-color: white;
+		border: 0.1rem solid black;
+		border-radius: 0.5rem;
+		/* color: #fff; */
+		/* display: block; */
+		font-size: 3rem;
+		left: 1rem;
+		line-height: 3rem;
+		padding: 0 1rem;
+		position: absolute;
+		visibility: visible;
+		/* z-index: 10; */
+		opacity: 1;
+		text-align: center;
+		/* transition: .3s opacity; */
+		top: 1rem width: 2rem;
+
+	}
+
+	.tooltip .tooltiptext {
+		background-color: white;
+		border: 0.1rem solid black;
+		border-radius: 0.5rem;
+		/* color: #fff; */
+		display: block;
+		font-size: 1rem;
+		padding: 1rem;
+		position: absolute;
+		visibility: collapse;
+		z-index: -1;
+		opacity: 0;
+		top: 2rem;
+		/* transition: .3s opacity; */
+	}
+
+	.tooltip:hover .tooltiptext {
+		visibility: visible;
+		opacity: 100;
+		transition: 1s opacity;
+	}
+
+	@media all and (max-width: 800px) {
+	#main {
+		left: 0;
+		padding: var( --margin);
+		width: 100%;
+	}
+	/* #navMenu {
+		display: block;
+	} */
+	#spnMenuHelp {
+		display: none;
+	}
+	#sumNavMenu {
+		font-size: 120%;
+		padding: var( --margin);
+		width: 3.5rem;
+	}
+}
+</style>
+
+<body>
+
+	<nav>
+
+		<div class="tooltip"><span>≡</span>
+			<span id=spnMenuHover class="tooltiptext">abc</span>
+		</div>
+
+	</nav>
+	<div id=divContent>
+
+		<h1>test</h1>
+
+		<p>lorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora
+			incidunt, ut labore et dolore magnam aliquam quaerat voluptatem. ut enim ad minima veniam, quis nostrum
+			exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? quis autem vel
+			eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui
+			dolorem eum fugiat, quo voluptas nulla pariatur?
+		</p>
+
+		<h1>test</h1>
+
+		<p>lorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora
+			incidunt, ut labore et dolore magnam aliquam quaerat voluptatem. ut enim ad minima veniam, quis nostrum
+			exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? quis autem vel
+			eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui
+			dolorem eum fugiat, quo voluptas nulla pariatur?
+		</p>
+
+
+		<h1>test</h1>
+
+		<p>lorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora
+			incidunt, ut labore et dolore magnam aliquam quaerat voluptatem. ut enim ad minima veniam, quis nostrum
+			exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? quis autem vel
+			eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui
+			dolorem eum fugiat, quo voluptas nulla pariatur?
+		</p>
+
+
+		<h1>test</h1>
+
+		<p>lorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora
+			incidunt, ut labore et dolore magnam aliquam quaerat voluptatem. ut enim ad minima veniam, quis nostrum
+			exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? quis autem vel
+			eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui
+			dolorem eum fugiat, quo voluptas nulla pariatur?
+		</p>
+
+
+		<h1>test</h1>
+
+		<p>lorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora
+			incidunt, ut labore et dolore magnam aliquam quaerat voluptatem. ut enim ad minima veniam, quis nostrum
+			exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? quis autem vel
+			eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui
+			dolorem eum fugiat, quo voluptas nulla pariatur?
+		</p>
+
+
+	</div>
+</body>
+
+</html>

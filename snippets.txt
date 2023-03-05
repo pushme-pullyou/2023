@@ -5,11 +5,15 @@
 
 Unicode Character “≡” (U+2261) https://www.compart.com/en/unicode/U+2261
 
+
+## Range
+
 <label title="do it"> Slider / Range <output id=out >50</output>
 	<input [ type=range ] id=rng oninput=outInp.value=value;>
 </label>
 
 
+##
 <span class="info"><img class=infoImg height=30px
 		src="https://pushme-pullyou.github.io/tootoo-2021/lib/assets/icons/noun_Information_585560.svg">
 	<span class="infoTooltip gmd-5">
@@ -38,3 +42,16 @@ function onLoad ( response ) {
 	divContent.innerText = response;
 
 }
+
+
+## aDingbat
+
+.aDingbat {
+	text-decoration: none;
+	font-size: 2rem;
+}
+
+***
+
+
+<center title="Hello! Click me to go up to the top" ><a class=aDingbat href=javascript:window.scrollTo(0,0);> ❦ </a></center>
