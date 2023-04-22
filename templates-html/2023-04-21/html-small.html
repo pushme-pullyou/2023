@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0" />
+	<meta name="description" content="">
+	<meta name="date" content="2023-04-21">
+	<title></title>
+	<style>
+		body {
+			font: 100% monospace;
+		}
+
+		nav {
+			background-color: #eee;
+			border: 1px solid #ccc;
+			border-radius: 0.5rem;
+			margin: 0.5rem;
+			padding: 0.5rem;
+			width: 20rem;
+		}
+		
+	</style>
+</head>
+
+<body>
+
+	<nav>
+
+		<h1>
+			<a href="https://github.com/pushme-pullyou/tootoo-2022/tree/master/xxxxxx/" target="_blank"
+			title="source code on GitHub"><img
+			src=https://pushme-pullyou.github.io/tootoo-2022/assets/icons/mark-github.svg></a>
+			<a href="" title="Click this menu title to reset the model">
+				<span id=spnTitle></span>
+				<span id=spnVersion></span>
+			</a>
+		</h1>
+
+		<div>
+			Document-centric projections unfetter traditional auditing practices rivaling central process management. Advanced functionality, easy administration, proclaim the hallmarks of unprecedented opportunity.
+		</div>
+	</nav>
+
+	<div id="divContent"></div>
+
+
+	<script>
+
+		init();
+
+		function init () {
+
+			spnTitle.innerHTML = document.title ? document.title : location.href.split( '/' ).pop().slice( 0, - 5 ).replace( /-/g, ' ' );
+
+			spnVersion.innerHTML = document.head.querySelector( "[ name=date ]" ).content;
+
+			requestFile();
+
+		}
+
+
+
+		function requestFile ( url = "https://theo-armour.github.io/", callback = onLoad ) {
+
+			xhr = new XMLHttpRequest();
+			xhr.open( "GET", url, true );
+			xhr.responseType = "text";
+			xhr.onerror = ( xhr ) => console.log( "error:", xhr );
+			//xhr.onprogress = ( xhr ) => console.log( "bytes loaded:", xhr.loaded );
+			xhr.onload = ( xhr ) => callback( xhr.target.response );
+			xhr.send( null );
+
+		}
+
+
+
+		function onLoad ( response ) {
+
+			console.log( "response", response );
+
+			divContent.innerText = response;
+
+		}
+
+	</script>
+
+
+</body>
+
+</html>
