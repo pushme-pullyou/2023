@@ -1,13 +1,13 @@
-# [![](https://pushme-pullyou.github.io/assets/svg/octicon.svg )](https://github.com/pushme-pullyou/assets/ "Source code on GitHub" ) [PushMe PullYou Assets]( https://pushme-pullyou.github.io/assets/ "Home page" ) / [Templates Read Me]( https://github.com/pushme-pullyou/assets/tree/main/templates/ "2023-01-22" )
+# [![](https://pushme-pullyou.github.io/2023/svg/octicon.svg )](https://github.com/pushme-pullyou/2023/ "Source code on GitHub" ) [PushMe PullYou Assets]( https://pushme-pullyou.github.io/2023/ "Home page" ) / [Templates Read Me]( https://github.com/pushme-pullyou/2023/tree/main/templates/ "2023-01-22" )
 
 _This file describes the template files. The files to copy are in a dated sub-folder_
 
 <!--@@@
-<div class=iframe-resize ><iframe src=https://pushme-pullyou.github.io/assets/templates/ height=100% width=100% ></iframe></div>
+<div class=iframe-resize ><iframe src=https://pushme-pullyou.github.io/2023/templates/ height=100% width=100% ></iframe></div>
 _"Templates Read Me" in a resizable window_
 @@@-->
 
-## Full Screen: [Templates]( https://pushme-pullyou.github.io/assets/templates/ )
+## Full Screen: [Templates]( https://pushme-pullyou.github.io/2023/templates/ )
 
 
 ## Concept
