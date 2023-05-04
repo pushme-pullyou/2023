@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang=en >
+<head>
+<title></title>
+<meta charset=utf-8 />
+</head>
+<body style="font: 100% monospace;" >
+
+	<div id="divFolders"> </div>
+<script>
+
+// get list of all the files in a GitHub repository using a tree object
+
+// const url = "https://api.github.com/repos/pushme-pullyou/2023/git/trees/main?recursive=1";
+
+// fetch( url )
+
+// .then( response => response.json() )
+
+// .then( json => {
+
+
+// 	console.log( "json", json );
+// 	let txt = "";
+
+// 	for ( let item of json.tree ) {
+
+// 		if ( item.type === "blob" ) {
+
+// 			txt += `<a href="${ url }${ item.path }" title="Click to view file contents" >${ item.path }</a><br>`;
+
+// 		}
+
+// 	}
+
+// 	divFolders.innerHTML = txt;
+
+// } );
+
+
+// get all the folders and files in a GitHub repository using a tree object
+
+// const url = "https://api.github.com/repos/pushme-pullyou/2023/git/trees/main?recursive=1";
+
+// fetch( url )
+
+// .then( response => response.json() )
+
+// .then( json => {
+
+// 	console.log( "json", json );
+// 	let txt = "";
+
+// 	for ( let item of json.tree ) {
+
+// 		if ( item.type === "tree" ) {
+
+// 			txt += `<a href="${ url }${ item.path }" title="Click to view folder contents" >${ item.path }</a><br>`;
+
+// 		} else if ( item.type === "blob" ) {
+
+// 			txt += `<a href="${ url }${ item.path }" title="Click to view file contents" >${ item.path }</a><br>`;
+
+// 		}
+
+// 	}
+
+// 	divFolders.innerHTML = txt;
+
+// } );
+
+// get all the folders and files in a GitHub repository using a tree object and display in a tree
+
+// const url = "https://api.github.com/repos/pushme-pullyou/2023/git/trees/main?recursive=1";
+
+// fetch( url )
+
+// .then( response => response.json() )
+
+// .then( json => {
+
+// 	console.log( "json", json );
+// 	let txt = "";
+
+// 	for ( let item of json.tree ) {
+
+// 		if ( item.type === "tree" ) {
+
+// 			txt += `<details><summary>${ item.path }</summary>`;
+
+// 			txt += `<a href="${ url }${ item.path }" title="Click to view folder contents" >${ item.path }</a><br>`;
+
+// 			txt += `</details>`;
+
+// 		} else if ( item.type === "blob" ) {
+
+// 			txt += `<a href="${ url }${ item.path }" title="Click to view file contents" >${ item.path }</a><br>`;
+
+// 		}
+
+// 	}
+
+// 	divFolders.innerHTML = txt;
+
+// } );
+
+// get all the folders and files in a GitHub repository using a tree object and display in a sparse tree
+
+
+// fetch the folders and files in a GitHub repository using a tree object, only display the folders that have files
+
+const url = "https://api.github.com/repos/pushme-pullyou/2023/git/trees/main?recursive=1";
+
+fetch( url )
+
+.then( response => response.json() )
+
+.then( json => {
+
+	console.log( "json", json );
+	let txt = "";
+
+	for ( let item of json.tree ) {
+
+		if ( item.type === "tree" ) {
+
+			txt += `<details><summary>${ item.path }</summary>`;
+
+			txt += `<a href="${ url }${ item.path }" title="Click to view folder contents" >${ item.path }</a><br>`;
+
+			txt += `</details>`;
+
+		} else if ( item.type === "blob" ) {
+
+			txt += `<a href="${ url }${ item.path }" title="Click to view file contents" >${ item.path }</a><br>`;
+
+		}
+
+	}
+
+	divFolders.innerHTML = txt;
+
+} );
+
+
+</script>
+</body>
+</html>
