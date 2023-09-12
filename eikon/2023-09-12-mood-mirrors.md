@@ -199,7 +199,10 @@ I used the Microsoft Windows app ClipChamp to combine the Chirp audio and the Ru
 
 * Combine Runway and Chirp files using Windows Clipchamp
 * Upload to YouTube
-* https://www.youtube.com/watch?v=fchmGNuRS5A
+
+See the video here
+
+### https://www.youtube.com/watch?v=fchmGNuRS5A
 
 ## Conclusion
 
