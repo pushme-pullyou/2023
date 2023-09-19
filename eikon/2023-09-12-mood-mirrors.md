@@ -1,5 +1,7 @@
 # 2023-09-12~ Mood Mirrors
 
+C:\Users\tarmo\OneDrive\Documents\GitHub\pushme-pullyou-2023\eikon\2023-09-12-mood-mirrors.md
+
 ## Concept
 
 See Alix's preliminary notes here
@@ -208,4 +210,11 @@ See the video here
 
 Chirp, MidJourney and Runway are all interesting tools. They work well with each other. All are fast, easy and free. I will use them again.
 
+Quote from Alix after seeing the video:
+
+"ahaha hahahha this made me laugh so hard"
+
+***
+
+<center title="Hello! Click me to go up to the top" ><a class=aDingbat href=javascript:window.scrollTo(0,0);> ❦ </a></center>
 
