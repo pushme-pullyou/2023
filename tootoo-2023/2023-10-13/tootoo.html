@@ -14,8 +14,7 @@
 
 	<!-- Copyright 2023 Theo Armour. MIT license -->
 
-	<link id=CORstyle rel="stylesheet"
-		href="style.css">
+	<link id=CORstyle rel="stylesheet" href="style.css">
 
 	<style>
 		:root {
@@ -29,23 +28,13 @@
 
 <body>
 
-	<div id=MNUdivShowHide></div>
-
-
-	<main id=main>
-
-		<div id="divMainContent"></div>
-
-	</main>
-
-
 	<script>
 
 		const COR = {
 
 			// Used by MNU ~ mnu-menu.js
 			description: document.head.querySelector( "[ name=description ]" ).content +
-			`<p>Release: 2023-10-13<p>`,
+				`<p>Release: 2023-10-13<p>`,
 			urlSource: "https://github.com/pushme-pullyou/assets/",
 			iconExternalFile: `<img class=infoImg  src="https://github.com/pushme-pullyou/assets/svg/icon-external-link.svg">`,
 			iconGitHub: `<img src="https://pushme-pullyou.github.io/assets/svg/mark-github.svg">`,
@@ -77,6 +66,26 @@
 
 		};
 
+	</script>
+
+	<script src="mnu-menu.js"></script>
+	<script src="frx-file-read-xhr.js"></script>
+	<script src="rv-github-repo-tree-view.js"></script>
+
+
+	<div id=MNUdivShowHide></div>
+
+
+	<main id=main>
+
+		<div id="divMainContent"></div>
+
+	</main>;
+
+
+
+	<script>
+
 
 		COR.scripts = [
 			"mnu-menu.js",
@@ -105,10 +114,10 @@
 
 		};
 
-		COR.loadLoaders();
+		//COR.loadLoaders();
 
 
-		function init() {
+		function init () {
 
 			// MNU => "Menu ~ mnu-menu.js"
 
