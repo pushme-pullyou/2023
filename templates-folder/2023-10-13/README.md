@@ -44,4 +44,4 @@ _"Templates Read Me" in a resizable window_
 
 ***
 
-<a title="Hello! Click me to go up to the top" href=javascript:window.scrollTo(0,0); style="color:red;font-size:5em"> ❦ </a>
+<a title="Hello! Click me to go up to the top" href=javascript:window.scrollTo(0,0); > ❦ </a>
