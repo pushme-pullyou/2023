@@ -157,6 +157,16 @@ FRX.onHashChange = function () {
 
 	FRX.selectHandler( FRX.url );
 
+
+	const txt = url.split( "/" ).pop();
+	let title = txt
+		.split( "-" )
+		.filter( x => x.length > 0 )
+		.map( ( x ) => ( x.charAt( 0 ).toUpperCase() + x.slice( 1 ) ) )
+		.join( " " );
+
+	document.title = title + " < " + COR.user;
+
 };
 
 
