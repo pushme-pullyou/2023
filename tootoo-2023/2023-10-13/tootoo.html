@@ -7,15 +7,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=contain">
 	<meta name="description"
 		content="TooToo 2023 uses the GitHub API to provide access to all the current files in a repository hosted with GitHub Pages.">
-	<meta name="keywords" content="JavaScript,Markdown,GitHub,FOSS">
+	<meta name="keywords" content="ShowDown,Markdown,AJAX,JavaScript,HTML,CSS,GitHub,FOSS">
 	<meta name="version" content="2023-10-13">
 	<meta name="author" content="Theo Armour">
 	<meta name="creator" content="https://github.com/pushme-pullyou/2023/tree/main/tootoo-2023">
 
 	<!-- Copyright 2023 Theo Armour. MIT license -->
-	
-	<link id=CORstyle rel="stylesheet" 
-		href="./lib02/style/r-2022-02-22/style.css">
+
+	<link id=CORstyle rel="stylesheet"
+		href="style.css">
 
 	<style>
 		:root {
@@ -44,28 +44,28 @@
 		const COR = {
 
 			// Used by MNU ~ mnu-menu.js
-			description: document.head.querySelector( "[ name=description ]" ).content + 
-			`<p>Release: 2022-10-17<p>`,
-			iconExternalFile: `<img class=infoImg  src="https://pushme-pullyou.github.io/tootoo-2022/assets/icons/icon-external-link.svg">`,
-			iconGitHub: `<img src="https://pushme-pullyou.github.io/tootoo-2022/assets/icons/mark-github.svg">`,
-			iconInfo: `<img class=infoImg src="https://pushme-pullyou.github.io/tootoo-2022/assets/icons/noun_Information_585560.svg">`,
+			description: document.head.querySelector( "[ name=description ]" ).content +
+			`<p>Release: 2023-10-13<p>`,
+			urlSource: "https://github.com/pushme-pullyou/assets/",
+			iconExternalFile: `<img class=infoImg  src="https://github.com/pushme-pullyou/assets/svg/icon-external-link.svg">`,
+			iconGitHub: `<img src="https://pushme-pullyou.github.io/assets/svg/mark-github.svg">`,
+			iconInfo: `<img class=infoImg src="https://pushme-pullyou.github.io/assets/svg/noun_Information_585560.svg">`,
 			iconRepo: "❦",
 			title: document.title ? document.title : location.href.split( "/" ).pop().slice( 0, - 5 ).replace( /-/g, " " ),
-			urlSource: "https://github.com/pushme-pullyou/tootoo-2022/", ////////// remember to update
-			version: document.head.querySelector( "[ name=date ]" ).content,
+			version: document.head.querySelector( "[ name=version ]" ).content,
 
 			// Used by FRX
-			defaultFile: "README.md",
+			defaultFile: "../README.md",
 
 			//pathContent: "https://pushme-pullyou.github.io/tootoo-2022/",
 			pathContent: "./",
 
-			pathTooToo: "https://pushme-pullyou.github.io/tootoo-2022/",
+			pathTooToo: "https://pushme-pullyou.github.io/2023/tootoo-2023/",
 			//pathTooToo: "./",
 
 			// Used by GRV
 			user: "pushme-pullyou",
-			repo: "tootoo-2022",
+			repo: "2023",
 			branch: "main",
 
 			//defaultIgnoreFolders: [],
@@ -79,9 +79,9 @@
 
 
 		COR.scripts = [
-			"lib02/mnu-menu/r-2022-02-20/mnu-menu.js",
-			"lib02/frx-file-read-xhr/r-2022-02-22/frx-file-read-xhr.js",
-			"lib10/grv-github-repo-tree-view/r-2022-10-16/grv-github-repo-tree-view.js"
+			"mnu-menu.js",
+			"frx-file-read-xhr.js",
+			"grv-github-repo-tree-view.js"
 		];
 
 		COR.loaded = 0;
@@ -99,7 +99,7 @@
 
 				const load = document.body.appendChild( document.createElement( 'script' ) );
 				load.onload = COR.loading;
-				load.src = COR.pathTooToo + script;
+				load.src = script;
 
 			}
 
