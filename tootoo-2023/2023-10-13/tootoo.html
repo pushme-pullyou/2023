@@ -47,8 +47,8 @@
 			// Used by FRX
 			defaultFile: "README.md",
 
-			//pathContent: "https://pushme-pullyou.github.io/2023/",
-			pathContent: "../../",
+			pathContent: "https://pushme-pullyou.github.io/2023/",
+			//pathContent: "../../",
 
 			//pathTooToo: "https://pushme-pullyou.github.io/2023/tootoo-2023/",
 			pathTooToo: "./",
@@ -123,6 +123,8 @@
 			// if running on server, keeps address bar pointed to latest dev
 
 			if ( location.protocol === "https:" ) {
+
+				COR.pathContent = "https://pushme-pullyou.github.io/2023/"
 
 				window.history.pushState( "", "", "../../" + location.hash );
 
