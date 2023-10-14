@@ -20,7 +20,7 @@ FRX.init = function () {
 	//FRX.defaultFile = COR.defaultFile ? COR.defaultFile : "README.md";
 
 	//FRX.pathContent = COR.pathContent ? COR.pathContent : "../../../";
-	FRX.pathTooToo = COR.pathTooToo ? COR.pathTooToo : "../../../";
+	FRX.pathTooToo = COR.pathTooToo ? COR.pathTooToo : "../../";
 	//FRX.pathUtilities = FRX.pathTooToo + `lib02/frx-file-read-xhr/${ FRX.release }/`;
 	FRX.pathUtilities = `./`;
 
