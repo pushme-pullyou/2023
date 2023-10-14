@@ -12,8 +12,10 @@ _"example.com" in a resizable window_
 
 ## Links of Interest
 
-* try https://simplemde.com/ ~ https://simplemde.com/
-  * https://github.com/Ionaru/easy-markdown-editor
+Try
+
+* https://simplemde.com/
+* https://github.com/Ionaru/easy-markdown-editor
 
 
 ## Text you can include in read me files
@@ -32,13 +34,21 @@ _"example.com" in a resizable window_
 
 ## To Do / Wish List
 
+* 2023-10-13 ~ update relevant read me files
+* 2023-10-13 ~ check if follows Win11 light and dark mode
+* 2023-10-13 ~ Fix open as single file not working
+* 2023-10-13 ~ Add edit file and save to GitHub
+* 2023-10-13 ~ Hamburger menu that is out of the way
+
 
 ## Issues
 
 
-
 ## Change Log
 
+### 2023-10-13
+
+* Many fixes
 
 ### 2023-01-22
 
