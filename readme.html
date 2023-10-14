@@ -7,9 +7,12 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=contain">
 	<meta name="description"
-		content="File wrangler. Default index.html file. Opens HTML or Markdown files. Passes location.hash.">
+		content="File wrangler: Opens HTML or Markdown files. Passes location.hash.">
 	<meta name="keywords" content="ShowDown,Markdown,AJAX,JavaScript,HTML,CSS,GitHub,FOSS">
-	<meta name="version" content="2023-01-22">
+	<meta name="version" content="2023-10-13">
+	<meta name="author" content="Theo Armour">
+	<meta name="creator" content="https://github.com/pushme-pullyou/2023/tree/main/templates-folder">
+
 
 	<style>
 		/* Copyright 2023 Theo Armour. MIT License */
@@ -60,6 +63,10 @@
 			background-color: #eee;
 		}
 
+		img {
+			max-width: 100%;
+		}
+
 		pre {
 			background-color: #eee;
 			padding: 0.5rem;
@@ -93,6 +100,7 @@
 			resize: both;
 			width: 100%;
 		}
+
 	</style>
 
 </head>
@@ -105,7 +113,6 @@
 	<div id=divContent></div>
 
 	<script>
-
 
 		defaultFile = "README.md";
 
