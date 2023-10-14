@@ -1,11 +1,11 @@
-# [![](https://pushme-pullyou.github.io/assets/svg/octicon.svg )](https://github.com/pushme-pullyou/2023/ "Source code on GitHub" ) [PushMe PullYou 2023]( https://pushme-pullyou.github.io/2023/ "Home page" )
+# [![](https://pushme-pullyou.github.io/assets/svg/octicon.svg )](https://github.com/pushme-pullyou/2023/ "Source code on GitHub" ) [pushMe pullYou 2023]( https://pushme-pullyou.github.io/2023/ "Home page" )
 
-<!--@@@
-<div class=iframe-resize ><iframe src=https://example.com height=100% width=100% ></iframe></div>
+<!--   @@@
+<div class=iframe-resize ><iframe src=https://pushme-pullyou.github.io/2023/ height=100% width=100% ></iframe></div>
 _"example.com" in a resizable window_
-@@@-->
+@@@  -->
 
-## Full Screen: [TooToo]( https://pushme-pullyou.github.io/2023/tootoo )
+## Full Screen: [pushMe pullYou 2023]( https://pushme-pullyou.github.io/2023/ )
 
 
 ## Concept
