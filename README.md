@@ -34,17 +34,16 @@ Try
 
 ## To Do / Wish List
 
-* 2023-10-13 ~ update relevant read me files
-* 2023-10-13 ~ check if follows Win11 light and dark mode
-* 2023-10-13 ~ Fix open as single file not working
-* 2023-10-13 ~ Add edit file and save to GitHub
-* 2023-10-13 ~ Hamburger menu that is out of the way
 
 
 ## Issues
 
 
 ## Change Log
+
+### 2023-10-14
+
+Move ToDo items to TooToo
 
 ### 2023-10-13
 
