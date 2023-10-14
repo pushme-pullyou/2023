@@ -6,7 +6,7 @@
 
 const FRX = {};
 
-FRX.release = "r-2022-02-06";
+FRX.release = "2023-10-14";
 
 FRX.reader = new FileReader();
 
@@ -21,8 +21,10 @@ FRX.init = function () {
 
 	//FRX.pathContent = COR.pathContent ? COR.pathContent : "../../../";
 	FRX.pathTooToo = COR.pathTooToo ? COR.pathTooToo : "../../";
-	//FRX.pathUtilities = FRX.pathTooToo + `lib02/frx-file-read-xhr/${ FRX.release }/`;
-	FRX.pathUtilities = `./`;
+	//FRX.pathHandlers = FRX.pathTooToo + `lib02/frx-file-read-xhr/${ FRX.release }/`;
+	//FRX.pathHandlers = `./`;
+
+	FRX.pathHandlers = "https://pushme-pullyou.github.io/2023/tootoo-2023/2023-10-13/handlers/";
 
 	FRX.defaultUrl = COR.pathContent + COR.defaultFile;
 
@@ -352,14 +354,14 @@ FRX.loadLoaders = function ( obj, scripts, onLoad ) {
 
 FRX.loadHandler = function ( obj, handler ) {
 
-	//console.log( "FRX.pathUtilities ", FRX.pathUtilities );
+	//console.log( "FRX.pathHandlers ", FRX.pathHandlers );
 
 	if ( window[ obj ] === undefined ) {
 
 		//console.log( "obj", obj );
 		scr = document.body.appendChild( document.createElement( 'script' ) );
 		//scr.onload dealt with individually by each handler
-		scr.src = FRX.pathUtilities + `handlers/${ handler }`;
+		scr.src = FRX.pathHandlers + `${ handler }`;
 		//scr.src = `js/handlers/${ parser }`;
 
 	} else {
