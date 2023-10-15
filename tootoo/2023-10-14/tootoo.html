@@ -3,14 +3,14 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>TooToo</title>
+	<title>pushMe pullYou</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=contain">
 	<meta name="description"
 		content="TooToo 2023 uses the GitHub API to provide access to all the current files in a repository hosted with GitHub Pages.">
 	<meta name="keywords" content="ShowDown,Markdown,AJAX,JavaScript,HTML,CSS,GitHub,FOSS">
 	<meta name="version" content="2023-10-14">
 	<meta name="author" content="Theo Armour">
-	<meta name="creator" content="https://github.com/pushme-pullyou/2023/tree/main/tootoo-2023">
+	<meta name="creator" content="https://github.com/pushme-pullyou/2023/tree/main/tootoo">
 
 	<!-- Copyright 2023 Theo Armour. MIT license -->
 
@@ -47,15 +47,15 @@
 			// Used by FRX
 			defaultFile: "README.md",
 
-			//pathContent: "https://theo-armour.github.io/tootoo-2023/",
+			//pathContent: "https://pushme-pullyou.github.io/tootoo-2023/",
 			pathContent: "../../",
 
-			//pathTooToo: "https://theo-armour.github.io/tootoo-2023/",
+			//pathTooToo: "https://pushme-pullyou.github.io/tootoo-2023/",
 			pathTooToo: "./",
 
 			// Used by GRV
-			user: "theo-armour",
-			repo: "tootoo-2023",
+			user: "pushme-pullyou",
+			repo: "2023",
 			branch: "main",
 
 			//defaultIgnoreFolders: [],
@@ -124,7 +124,7 @@
 
 			if ( location.protocol === "https:" ) {
 
-				COR.pathContent = "https://theo-armour.github.io/tootoo-2023/"
+				COR.pathContent = "https://pushme-pullyou.github.io/2023/"
 
 				window.history.pushState( "", "", "../../" + location.hash );
 
