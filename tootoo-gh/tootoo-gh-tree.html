@@ -12,6 +12,9 @@
 	<input type="password" id="token" onchange="storeToken()">
 
 	<select id="fileSelect" onchange="loadFile()"></select>
+
+	<div id="tree"></div>
+
 	<div id="content"></div>
 
 	<script>
@@ -30,8 +33,11 @@
 			localStorage.setItem( 'githubToken', tokenInput.value );
 		}
 
+		const treeDiv = document.getElementById( 'tree' );
+
 		// Fetch all files in the repo
 		fetchFiles();
+
 
 		async function fetchFiles ( path = '' ) {
 			const headers = {
@@ -42,13 +48,30 @@
 				if ( !response.ok ) {
 					throw new Error( `HTTP error! status: ${ response.status }` );
 				} else {
-					const files = await response.json();
-					updateFileSelect( files );
+					return await response.json();
 				}
 			} catch ( error ) {
 				console.error( 'There was a problem with the fetch operation: ', error );
 			}
 		}
+
+		async function createTree ( path = '' ) {
+			const files = await fetchFiles( path );
+			const ul = document.createElement( 'ul' );
+			for ( const file of files ) {
+				const li = document.createElement( 'li' );
+				li.textContent = file.name;
+				ul.appendChild( li );
+				if ( file.type === 'dir' ) {
+					li.appendChild( await createTree( `${ file.path }/` ) );
+				}
+			}
+			return ul;
+		}
+
+
+		createTree().then( tree => treeDiv.appendChild( tree ) );
+
 
 		function updateFileSelect ( files ) {
 			fileSelect.innerHTML = '';
